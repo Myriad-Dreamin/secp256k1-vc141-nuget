@@ -75,6 +75,11 @@
     </Option-schnorr>
     <Option-recovery>true</Option-recovery>
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>USE_BASIC_CONFIG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\..\..\packaging\nuget\gmp\package.bat" />
     <None Include="..\..\..\..\packaging\nuget\gmp\package.config" />
